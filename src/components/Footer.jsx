@@ -2,8 +2,7 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-brand">
-        <span className="brand-dot">F</span>
-        <p>De TODO en FOAMY PERSONALIZADO - Jenniffer</p>
+        <p>Siguenos en nuestras redes sociales</p>
       </div>
       <div className="social-links" aria-label="Redes sociales">
         <a className="social-link" href="https://wa.me/5491112345678" target="_blank" rel="noreferrer">
