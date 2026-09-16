@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import './App.css'
+import Logo from './components/Logo'
 import CategoryNav from './components/CategoryNav'
 import Footer from './components/Footer'
 import HeroInfo from './components/HeroInfo'
@@ -16,7 +17,9 @@ function App() {
 
   return (
     <>
-      <HeroInfo businessInfo={businessInfo} />
+    <div className="inicio">
+      <Logo businessInfo={businessInfo}/></div>
+      <HeroInfo/>
 
       <div className="page-shell">
         <main className="catalog-app">

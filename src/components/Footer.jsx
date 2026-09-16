@@ -17,10 +17,6 @@ function Footer() {
           <img src="/social/facebook.svg" alt="Facebook" className="social-icon" />
           <span>Facebook</span>
         </a>
-        <a className="social-link" href="mailto:hola@arteinfoamy.com">
-          <img src="/social/mail.svg" alt="Email" className="social-icon" />
-          <span>hola@arteinfoamy.com</span>
-        </a>
       </div>
     </footer>
   )

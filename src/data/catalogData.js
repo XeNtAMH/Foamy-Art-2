@@ -1,6 +1,9 @@
 export const businessInfo = {
   name: 'Arte en Foamy',
-  description: 'Creaciones únicas y personalizadas hechas a mano con amor y dedicación.',
+  description1: 'De TODO en FOAMY totalmente PERSONALIZADO',
+  description2: 'USTED PIDE Y NOSOTROS LO REALIZAMOS',
+  description3: 'Por UNIDAD y por CANTIDAD para su negocio',
+  description4: 'No olvides que un detalle es mas bonito si es hecho con amor',
   // usamos el favicon público como logo por defecto
   logo: '/favicon.svg',
 }
