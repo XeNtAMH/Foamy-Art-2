@@ -3,6 +3,7 @@ function HeroInfo({ businessInfo }) {
   // El hero ocupa la parte superior (full viewport) y el contenido se superpone al desplazarse.
   return (
     <section className="hero-section hero-full" aria-label="Portada">
+      <img src='public/portada.png'></img>
     </section>
   )
 }

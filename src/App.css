@@ -49,7 +49,7 @@ a {
   width: 100%;
   height: auto;
   margin: 0;
-  padding: 18px 18px 0;
+  padding: 10px 18px 0;
   background: linear-gradient(135deg, rgba(255, 182, 193, 0.22), rgba(221, 160, 221, 0.18), rgba(173, 216, 230, 0.2));
   border-bottom: 1px solid rgba(43, 43, 43, 0.04);
 }
@@ -122,6 +122,10 @@ a {
   overflow: hidden;
 }
 
+.hero-section img{
+  opacity: 0%;
+}
+
 .hero-section::before {
   content: '';
   position: absolute;
@@ -132,7 +136,7 @@ a {
 }
 
 .hero-copy {
-  padding: 28px 18px 18px;
+  padding: 2px 18px 18px;
   color: var(--text-color);
   justify-self: center;
   width: 100%;
@@ -333,11 +337,7 @@ a {
 
 
 .section-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  align-items: end;
-  margin-bottom: 24px;
+  justify-content: center;
 }
 
 .section-badge {
@@ -351,18 +351,19 @@ a {
 
 .section-header h2 {
   margin: 0;
+  margin-bottom: 2%;
   font-size: clamp(1.7rem, 2.5vw, 2.4rem);
 }
 
-.section-header p {
-  margin: 0;
-  max-width: 48ch;
+.section-description {
+  margin: 5%;
+  max-width: auto;
   color: #000;
 }
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
 }
 
@@ -380,7 +381,7 @@ a {
 .product-card img {
   width: 100%;
   height: 250px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .product-body {
@@ -492,22 +493,36 @@ a {
 
 .section-image {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: auto;
+  object-fit:fill;
   border-radius: 12px;
   box-shadow: 0 10px 24px rgba(43,43,43,0.06);
 }
 
+@media (max-width: 1045px) {
+  .hero-section {
+  background-image:none;
+  display: block;
+  min-height: auto;
+}
+  .hero-section::before {
+  position:relative;
+}
+  .hero-section img{
+  opacity: 100%;
+  object-fit:fill;
+  width: 100%;
+  height: auto;
+  }
+  .page-shell{
+    
+  }
+}
 @media (max-width: 1030px) {
   .product-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-
-@media (max-width: 990px) {
-  
-}
-
 @media (max-width: 600px) {
   .product-grid {
     grid-template-columns: repeat(1, minmax(0, 1fr));
