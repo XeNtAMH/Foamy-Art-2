@@ -8,7 +8,7 @@ export const businessInfo = {
   logo: '/jenniffer.png',
 }
 
-export const catalog = [
+const catalogData = [
   {
     id: 'fofuchas',
     title: 'Logos para su negocio',
@@ -273,7 +273,7 @@ export const catalog = [
         name: 'Corazón (8-9cm) con 12 rosas pequeñas + 1 mariposa + Letrero pequeño',
         price: '500 CUP',
         description: '',
-        image: '/foami/IMG_20250203_121026_858.webp',
+        image: '/foami/IMG_20250203_121026_858.jpg',
       },
       {
         id: 'cen-016',
@@ -428,7 +428,7 @@ export const catalog = [
         name: 'Porta para tazas y otros regalitos decorativos  700$',
         price: '700 CUP',
         description: '20cm x 20cm ancho del cuadrado y altura dependiendo del adorno',
-        image: '/foami/IMG_20250202_172400_168.webp',
+        image: '/foami/IMG_20250202_172400_168.jpg',
       },
       {
         id: 'll-021',
@@ -689,7 +689,7 @@ export const catalog = [
         name: 'Juego de 12 mariposas caladas para la pared',
         price: '600 CUP',
         description: 'Incluye 6 pequeñas y 6 grandes.',
-        image: '/foami/IMG_20250415_161120_574.webp',
+        image: '/foami/IMG_20250415_161120_574.jpg',
       },
       {
         id: 'dec-017',
@@ -731,7 +731,7 @@ export const catalog = [
         name: 'Kit personalizado para niña',
         price: '1000 CUP',
         description: 'Incluye envase para guardar accesorios, colgante para cintillos y colgante para hebillas o clips.',
-        image: '/foami/IMG-20230613-WA0253.jpeg',
+        image: '/foami/IMG-20230613-WA0253.jpg',
       },
       {
         id: 'dec-023',
@@ -1169,7 +1169,7 @@ export const catalog = [
         name: 'Rosas para adornar cakes de cumpleaños o bodas',
         price: '200 CUP',
         description: '15 piezas. 5 capas por unidad.',
-        image: '/foami/IMG-20230824-WA0024.jpeg',
+        image: '/foami/IMG-20230824-WA0024.jpg',
       },
       {
         id: 'cum-002',
@@ -1225,7 +1225,7 @@ export const catalog = [
         name: 'Topper para fin de año',
         price: '400 CUP',
         description: '',
-        image: '/foami/IMG_20251231-WA0000.jpg',
+        image: '/foami/IMG-20251231-WA0000.jpg',
       },
       {
         id: 'cum-010',
@@ -1246,7 +1246,7 @@ export const catalog = [
         name: 'Topper para graduación',
         price: '400 CUP',
         description: '10 cm aproximadamente.',
-        image: '/foami/IMG-20240104-WA0005.jpeg',
+        image: '/foami/IMG-20240104-WA0005.jpg',
       },
       {
         id: 'cum-013',
@@ -1392,3 +1392,32 @@ export const catalog = [
     ],
   }
 ]
+
+const imageFolderByCategory = {
+  fofuchas: 'logos',
+  'Dia de las madres y los padres': 'madres-padres',
+  '14 de febrero': '14-febrero',
+  'Decoraciones para la cocina': 'cocina',
+  'Decoracion de habitaciones y adornos': 'habitaciones-adornos',
+  'De todo para baby shower y revelacion de genero': 'baby-shower',
+  'Decoraciones navideñas': 'navidad',
+  'Decoraciones para Halloween': 'halloween',
+  'Cumpleaños y otras celebraciones': 'cumpleanos',
+}
+
+const moveImageIntoCategory = (image, folder) =>
+  image.startsWith('/foami/') ? image.replace('/foami/', `/foami/${folder}/`) : image
+
+export const catalog = catalogData.map((category) => {
+  const folder = imageFolderByCategory[category.id]
+  if (!folder) return category
+
+  return {
+    ...category,
+    image: moveImageIntoCategory(category.image, folder),
+    items: category.items.map((item) => ({
+      ...item,
+      image: moveImageIntoCategory(item.image, folder),
+    })),
+  }
+})
