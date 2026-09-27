@@ -5,10 +5,12 @@ import CategoryNav from './components/CategoryNav'
 import Footer from './components/Footer'
 import HeroInfo from './components/HeroInfo'
 import Section from './components/Section'
+import ProductModal from './components/ProductModal'
 import { businessInfo, catalog } from './data/catalogData'
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(catalog[0].id)
+  const [selectedProduct, setSelectedProduct] = useState(null)
 
   const activeSection = useMemo(
     () => catalog.find((section) => section.id === selectedCategory) ?? catalog[0],
@@ -29,11 +31,14 @@ function App() {
             onSelect={setSelectedCategory}
           />
 
-          <Section section={activeSection} />
+          <Section section={activeSection} onProductSelect={setSelectedProduct} />
         </main>
 
         <Footer />
       </div>
+      {selectedProduct && (
+        <ProductModal item={selectedProduct} onClose={() => setSelectedProduct(null)} />
+      )}
     </>
   )
 }

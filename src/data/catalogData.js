@@ -1408,16 +1408,22 @@ const imageFolderByCategory = {
 const moveImageIntoCategory = (image, folder) =>
   image.startsWith('/foami/') ? image.replace('/foami/', `/foami/${folder}/`) : image
 
+const getPriceValue = (price) => {
+  const amount = price.match(/[0-9]+(?:[.,][0-9]+)?/)?.[0]
+  return amount ? Number(amount.replace(',', '.')) : Number.POSITIVE_INFINITY
+}
+
 export const catalog = catalogData.map((category) => {
   const folder = imageFolderByCategory[category.id]
-  if (!folder) return category
 
   return {
     ...category,
-    image: moveImageIntoCategory(category.image, folder),
-    items: category.items.map((item) => ({
-      ...item,
-      image: moveImageIntoCategory(item.image, folder),
-    })),
+    ...(folder ? { image: moveImageIntoCategory(category.image, folder) } : {}),
+    items: category.items
+      .map((item) => ({
+        ...item,
+        image: folder ? moveImageIntoCategory(item.image, folder) : item.image,
+      }))
+      .sort((first, second) => getPriceValue(first.price) - getPriceValue(second.price)),
   }
 })

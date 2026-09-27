@@ -1,6 +1,19 @@
-function ProductCard({ item }) {
+function ProductCard({ item, onSelect }) {
   return (
-    <article className="product-card">
+    <article
+      className="product-card"
+      role="button"
+      tabIndex={0}
+      aria-haspopup="dialog"
+      aria-label={`Ver imagen ampliada de ${item.name}`}
+      onClick={() => onSelect(item)}
+      onKeyDown={(event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault()
+          onSelect(item)
+        }
+      }}
+    >
       <img src={item.image} alt={item.name} />
       <div className="product-body">
         <div className="product-meta">
