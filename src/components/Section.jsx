@@ -8,16 +8,20 @@ function Section({ section }) {
           <p className="section-badge">Colección</p>
           <h2>{section.title}</h2>
         </div>
-        <div className='section-description'>
-        <p>{section.description}</p>
-        </div>
-      </div>
 
       {section.image && (
         <div className="section-visual">
           <img className="section-image" src={section.image} alt={`${section.title} preview`} />
         </div>
       )}
+
+
+        <div className='section-description'>
+        <p>{section.description}</p>
+        </div>
+      </div>
+
+      
 
       <div className="product-grid">
         {section.items.map((item) => (
