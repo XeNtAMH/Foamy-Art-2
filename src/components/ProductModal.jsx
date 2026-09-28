@@ -1,12 +1,32 @@
 import { useEffect, useRef } from 'react'
 
-function ProductModal({ item, onClose }) {
+function ProductModal({ item, scrollPosition, onClose }) {
   const dialogRef = useRef(null)
 
   useEffect(() => {
     const dialog = dialogRef.current
+    const body = document.body
+    const previousStyles = {
+      position: body.style.position,
+      top: body.style.top,
+      left: body.style.left,
+      right: body.style.right,
+      width: body.style.width,
+      overflow: body.style.overflow,
+    }
+
+    body.style.position = 'fixed'
+    body.style.top = `-${scrollPosition}px`
+    body.style.left = '0'
+    body.style.right = '0'
+    body.style.width = '100%'
+    body.style.overflow = 'hidden'
     if (dialog && !dialog.open) dialog.showModal()
-  }, [])
+
+    return () => {
+      Object.assign(body.style, previousStyles)
+    }
+  }, [scrollPosition])
 
   return (
     <dialog

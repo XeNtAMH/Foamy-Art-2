@@ -11,6 +11,19 @@ import { businessInfo, catalog } from './data/catalogData'
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(catalog[0].id)
   const [selectedProduct, setSelectedProduct] = useState(null)
+  const [modalScrollPosition, setModalScrollPosition] = useState(0)
+
+  const openProductModal = (item) => {
+    setModalScrollPosition(window.scrollY)
+    setSelectedProduct(item)
+  }
+
+  const closeProductModal = () => {
+    setSelectedProduct(null)
+    requestAnimationFrame(() =>
+      window.scrollTo({ top: modalScrollPosition, behavior: 'instant' }),
+    )
+  }
 
   const activeSection = useMemo(
     () => catalog.find((section) => section.id === selectedCategory) ?? catalog[0],
@@ -31,13 +44,17 @@ function App() {
             onSelect={setSelectedCategory}
           />
 
-          <Section section={activeSection} onProductSelect={setSelectedProduct} />
+          <Section section={activeSection} onProductSelect={openProductModal} />
         </main>
 
         <Footer />
       </div>
       {selectedProduct && (
-        <ProductModal item={selectedProduct} onClose={() => setSelectedProduct(null)} />
+        <ProductModal
+          item={selectedProduct}
+          scrollPosition={modalScrollPosition}
+          onClose={closeProductModal}
+        />
       )}
     </>
   )
