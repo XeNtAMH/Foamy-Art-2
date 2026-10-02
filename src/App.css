@@ -421,6 +421,13 @@ a {
   margin: 0;
   line-height: 1.7;
   color: var(--text-color);
+  text-align: center;
+}
+
+.tip{
+  color:#ff759a;
+  text-align: center;
+  margin-bottom:10px;
 }
 
 .site-footer {
@@ -559,6 +566,8 @@ a {
   object-fit: contain;
   background: #f6f4f5;
 }
+
+
 
 .product-modal__description {
   margin-top: 14px;

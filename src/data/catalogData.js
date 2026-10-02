@@ -262,9 +262,9 @@ const catalogData = [
       },
       {
         id: 'cen-014',
-        name: 'Tazas decorativas para regalar a mamá',
-        price: 'PAR en 600 CUP',
-        description: '10cm aproximadamente.',
+        name: 'Tazas decorativas para regalar a mamá.',
+        price: '600 CUP',
+        description: 'Por pares. 10cm aproximadamente.',
         image: '/foami/IMG_20260912_162107.jpg',
       },
       {
@@ -533,7 +533,7 @@ const catalogData = [
         name: 'Par de Cupcakes de unicornio para pegar en el refrigerador',
         price: '350 CUP',
         description: '10cm',
-        image: '/foami/IMG_20240509_212213.jpg',
+        image: '/foami/IMG_20260915_084852.jpg',
       },
       {
         id: 'tar-010',
@@ -828,7 +828,7 @@ const catalogData = [
         id: 'baby-002',
         name: 'Pomitos de leche',
         price: '200 CUP',
-        description: 'Precio por par.',
+        description: 'Precio por par. 10cm.',
         image: '/foami/1686797635198.jpg',
       },
       {
@@ -912,7 +912,7 @@ const catalogData = [
         id: 'baby-014',
         name: 'Adornos para cake: 2 osos + 4 rosas + letrero',
         price: '800 CUP',
-        description: 'Osos de 10 cm y letrero de 10 cm.',
+        description: '12-15cm de alto.',
         image: '/foami/IMG-20250720-WA0015.jpg',
       },
       {
@@ -989,7 +989,7 @@ const catalogData = [
       {
         id: 'nav-005',
         name: 'Topper navideño para cakes o dulces',
-        price: '200 CUP',
+        price: '400 CUP',
         description: '12 piezas: 2 de cada tipo.',
         image: '/foami/IMG_20260918_204318.jpg',
       },
@@ -1165,7 +1165,7 @@ const catalogData = [
       {
         id: 'hal-001',
         name: 'Arañita para adornar la pared',
-        price: '600 CUP',
+        price: '500 CUP',
         description: '20 cm.',
         image: '/foami/IMG_20260921_114226.jpg',
       },
@@ -1186,7 +1186,7 @@ const catalogData = [
       {
         id: 'hal-004',
         name: 'Fantasmita con calabaza',
-        price: '600 CUP',
+        price: '500 CUP',
         description: '20 cm aproximadamente.',
         image: '/foami/IMG_20260921_114514.jpg',
       },
@@ -1223,7 +1223,7 @@ const catalogData = [
         id: 'cum-001',
         name: 'Rosas para adornar cakes de cumpleaños o bodas',
         price: '200 CUP',
-        description: '15 piezas. 5 capas por unidad.',
+        description: '5 capas por unidad.',
         image: '/foami/IMG-20230824-WA0024.jpg',
       },
       {
@@ -1313,7 +1313,7 @@ const catalogData = [
       {
         id: 'cum-014',
         name: 'Topper para cumpleaños: nombre + número + 2 figuras sencillas',
-        price: '500 CUP',
+        price: '400 CUP',
         description: 'Nombre de 8 y 4cm las letras, el numero de 7cm y los corazones de 4cm',
         image: '/foami/IMG_20260921_124531.jpg',
       },
@@ -1362,7 +1362,7 @@ const catalogData = [
       {
         id: 'cum-021',
         name: 'Felices # meses + TQM',
-        price: '600 CUP',
+        price: '500 CUP',
         description: 'Letras de 6-4cm',
         image: '/foami/IMG_20260921_124554.jpg',
       },
