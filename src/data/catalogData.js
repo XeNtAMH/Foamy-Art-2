@@ -4,7 +4,6 @@ export const businessInfo = {
   description2: 'USTED PIDE Y NOSOTROS LO REALIZAMOS',
   description3: 'Por UNIDAD y por CANTIDAD para su negocio',
   description4: 'No olvides que un detalle es mas bonito si es hecho con amor',
-  // usamos el favicon público como logo por defecto
   logo: '/jenniffer.png',
 }
 
@@ -1426,24 +1425,17 @@ const catalogData = [
     ],
   },
   {
-    id: 'Fotografias',
-    title: 'Fotografias',
-    description: 'Accesorios de uso diario hechos a mano.',
-    image: '/favicon.svg',
+    id: 'Portarretratos de Foamy',
+    title: 'Portarretratos de Foamy',
+    description: 'Portarretratos para colocar tus fotos favoritas, asi como para regalar. Te traemos hermosas propuestas de algunos, totalmente personalizados. Estos incluyen foto aunque usted puede traer la foto y se le hace un descuento.',
+    image: '/foami/IMG_20260930_142619.jpg',
     items: [
       {
-        id: 'fot-001',
-        name: 'Broche Flor',
-        price: '$7.50',
-        description: 'Broche con pétalos de foamy y cierre metálico.',
-        image: 'https://via.placeholder.com/600x400.png?text=Broche+Flor',
-      },
-      {
-        id: 'fot-002',
-        name: 'Vincha Decorativa',
-        price: '$9.00',
-        description: 'Vincha para cabello con detalles artesanales.',
-        image: 'https://via.placeholder.com/600x400.png?text=Vincha',
+        id: 'port-001',
+        name: '- En Desarrollo -',
+        price: '??? CUP',
+        description: '- En Desarrollo -',
+        image: '',
       },
     ],
   }
@@ -1459,6 +1451,7 @@ const imageFolderByCategory = {
   'Decoraciones navideñas': 'navidad',
   'Decoraciones para Halloween': 'halloween',
   'Cumpleaños y otras celebraciones': 'cumpleanos',
+  'Portarretratos de Foamy': 'portarretratos',
 }
 
 const moveImageIntoCategory = (image, folder) =>
