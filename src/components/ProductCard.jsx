@@ -20,7 +20,7 @@ function ProductCard({ item, onSelect }) {
           <h3>{item.name}</h3>
           <span className="price-tag">{item.price}</span>
         </div>
-        <div className="tip">- Toque la imagen para expandirla -</div>
+        <div className="tip">Toque la imagen para expandirla</div>
         <p>{item.description}</p>
       </div>
     </article>
