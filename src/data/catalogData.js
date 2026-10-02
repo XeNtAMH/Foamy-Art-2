@@ -1432,10 +1432,38 @@ const catalogData = [
     items: [
       {
         id: 'port-001',
-        name: '- En Desarrollo -',
-        price: '??? CUP',
-        description: '- En Desarrollo -',
-        image: '',
+        name: 'Marcos sencillos para foto 4x6',
+        price: '300 CUP',
+        description: 'Para pegar en la pared. Precio por unidad.',
+        image: '/foami/IMG_20261002_115435.jpg',
+      },
+      {
+        id: 'port-002',
+        name: 'Cuadrito colgante de 3 piezas con decoraciones',
+        price: '1000 CUP',
+        description: 'Para fotos de 4x6.',
+        image: '/foami/IMG-20240315-WA0073.jpg',
+      },
+      {
+        id: 'port-003',
+        name: 'Marco para 3 fotos',
+        price: '900 CUP',
+        description: '3 piezas para fotos de 4x6 cada una.',
+        image: '/foami/30a4516ea33f6e8cfddf4a5ed589067f.jpg',
+      },
+      {
+        id: 'port-004',
+        name: 'Cuadro doble decorado',
+        price: '700 CUP',
+        description: 'Para pegar en la pared. Cada espacio es para una foto de 4x6.',
+        image: '/foami/IMG-20250127-WA0130.jpg',
+      },
+      {
+        id: 'port-005',
+        name: 'Cuadro para mesa con decoración sencilla',
+        price: '500 CUP',
+        description: 'Para foto de 5x7 pulgadas.',
+        image: '/foami/IMG_20260930_140952.jpg',
       },
     ],
   }
