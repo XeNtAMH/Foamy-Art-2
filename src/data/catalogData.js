@@ -809,6 +809,13 @@ const catalogData = [
         description: '10 cm; con flores, rosas y mariposas.',
         image: '/foami/InShot_20260927_110247593.jpg',
       },
+      {
+        id: 'dec-032',
+        name: 'Colgante para bebé recién nacido',
+        price: '1000 CUP',
+        description: '',
+        image: '/foami/IMG_20261004_155241.jpg',
+      },
     ],
   },
   {
